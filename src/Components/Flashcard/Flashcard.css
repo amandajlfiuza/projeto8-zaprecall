@@ -1,0 +1,120 @@
+.flashcard {
+    width: 300px;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    border: 1px solid #D70900;
+    box-shadow: 0px 4px 4px #D75C5C;
+    font-family: 'Recursive', sans-serif;
+}
+
+
+.closed {
+    height: 65px;
+    background-color: white;
+}
+.front {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.index-question {
+    color: #333333;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.2px;
+}
+.closed ion-icon {
+    font-weight: 700;
+    font-size: 23px;
+}
+.closed .question {
+    display: none;
+}
+.closed .turn-icon {
+    display: none;
+}
+.closed .answer {
+    display: none;
+}
+.closed .buttons {
+    display: none;
+}
+
+
+.open-question {
+    background-color: #FFFFD4;
+    position: relative;
+}
+.open-question .question {
+    color: #333333;
+    font-weight: 400;
+    font-size: 18px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+.open-question .turn-icon {
+    float: right;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 2;
+}
+.open-question .front {
+    display: none;
+}
+.open-question .answer {
+    opacity: 0;
+}
+.open-question .buttons {
+    opacity: 0;
+}
+
+
+.open-answer {
+    background-color: #FFFFD4;
+}
+.open-answer .answer {
+    margin-bottom: 25px;
+    color: #333333;
+    font-weight: 400;
+    font-size: 18px;
+}
+.open-answer .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.open-answer .buttons div {
+    width: 85.17px;
+    height: 37.17px;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+.open-answer .incorrect {
+    background-color: #FF3030;
+}
+.open-answer .correct-with-effort {
+    background-color: #FF922E;
+}
+.open-answer .correct {
+    background-color: #2FBE34;
+}
+.open-answer .front {
+    display: none;
+}
+.open-answer .question {
+    display: none;
+}
+.open-answer .turn-icon {
+    display: none;
+}
