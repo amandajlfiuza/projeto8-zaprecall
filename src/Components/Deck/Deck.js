@@ -42,14 +42,27 @@ function generateRandomIndex() {
 
 questions.sort(generateRandomIndex);
 
-const renderQuestions = questions.map((quest, index) => 
+export default function Deck({
+    answersCounter, 
+    setAnswersCounter, 
+    iconsResult, 
+    setIconsResult, 
+    incorrectsCounter, 
+    setIncorrectsCounter}) {
+
+    const renderQuestions = questions.map((quest, index) => 
         (<Flashcard
             index={index}
             question={quest.question} 
             answer={quest.answer} 
+            answersCounter={answersCounter} 
+            setAnswersCounter={setAnswersCounter}
+            iconsResult={iconsResult}
+            setIconsResult={setIconsResult}
+            incorrectsCounter={incorrectsCounter}
+            setIncorrectsCounter={setIncorrectsCounter}
         />));
 
-export default function Deck() {
     return (
         <div class='deck'>
             {renderQuestions}

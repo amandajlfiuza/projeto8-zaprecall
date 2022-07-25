@@ -1,0 +1,40 @@
+.finalResult {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: white;
+    text-align: center;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.finalResult em {
+    font-weight: bold;
+}
+.finalMessage, .answersCounter {
+    font-family: 'Recursive', sans-serif;
+    font-size: 18px;
+    color: #333333;
+}
+.finalMessage {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 14px;
+}
+.answersCounter {
+    margin-bottom: 6px;
+}
+.icon-incorrect {
+    color: #FF3030;
+}
+.icon-correct-with-effort {
+    color: #FF922E;
+}
+.icon-correct {
+    color: #2FBE34;
+}
+.icon-incorrect, .icon-correct-with-effort, .icon-correct {
+    font-size: 23px;
+}
