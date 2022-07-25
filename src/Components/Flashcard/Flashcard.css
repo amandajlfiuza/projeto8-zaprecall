@@ -46,6 +46,8 @@
     color: #333333;
     font-weight: 400;
     font-size: 18px;
+    word-break: break-word;
+
     position: absolute;
     top: 15px;
     left: 15px;
@@ -63,12 +65,24 @@
 }
 .open-question .answer {
     opacity: 0;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 18px;
+    word-break: break-word;
 }
 .open-question .buttons {
     opacity: 0;
+    display: flex;
+    justify-content: space-between;
 }
-.open-question .icons {
-    display: none;
+.open-question .buttons div {
+    width: 31%;
+    height: 37.17px;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -80,6 +94,7 @@
     color: #333333;
     font-weight: 400;
     font-size: 18px;
+    word-break: break-word;
 }
 .open-answer .buttons {
     width: 100%;

@@ -1,4 +1,6 @@
 .deck {
     width: 80%;
+    height: 100%;
     margin-bottom: 180px;
+    overflow-y: hidden;
 }
