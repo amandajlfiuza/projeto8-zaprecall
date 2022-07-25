@@ -14,6 +14,7 @@
     background-color: white;
 }
 .front {
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -25,20 +26,11 @@
     font-size: 16px;
     line-height: 19.2px;
 }
-.closed ion-icon {
+.closed .icon-play {
     font-weight: 700;
     font-size: 23px;
 }
-.closed .question {
-    display: none;
-}
-.closed .turn-icon {
-    display: none;
-}
-.closed .answer {
-    display: none;
-}
-.closed .buttons {
+.closed .question, .closed .turn-icon, .closed .answer, .closed .buttons, .closed .icon-incorrect, .closed .icon-correct-with-effort, .closed .icon-correct {
     display: none;
 }
 
@@ -48,6 +40,7 @@
     position: relative;
 }
 .open-question .question {
+    width: 268px;
     color: #333333;
     font-weight: 400;
     font-size: 18px;
@@ -61,6 +54,7 @@
     bottom: 15px;
     right: 15px;
     z-index: 2;
+    cursor: pointer;
 }
 .open-question .front {
     display: none;
@@ -70,6 +64,9 @@
 }
 .open-question .buttons {
     opacity: 0;
+}
+.open-question .icons {
+    display: none;
 }
 
 
@@ -102,12 +99,15 @@
 }
 .open-answer .incorrect {
     background-color: #FF3030;
+    cursor: pointer;
 }
 .open-answer .correct-with-effort {
     background-color: #FF922E;
+    cursor: pointer;
 }
 .open-answer .correct {
     background-color: #2FBE34;
+    cursor: pointer;
 }
 .open-answer .front {
     display: none;
@@ -116,5 +116,40 @@
     display: none;
 }
 .open-answer .turn-icon {
+    display: none;
+}
+.open-answer .icons {
+    display: none;
+}
+
+
+.closed.incorrect .index-question {
+    color: #FF3030;
+    text-decoration: line-through;
+}
+.closed.incorrect .icon-incorrect {
+    color: #FF3030;
+}
+.closed.correct-with-effort .index-question {
+    color: #FF922E;
+    text-decoration: line-through;
+}
+.closed.correct-with-effort .icon-correct-with-effort {
+    color: #FF922E;
+}
+.closed.correct .index-question {
+    color: #2FBE34;
+    text-decoration: line-through;
+}
+.closed.correct .icon-correct {
+    color: #2FBE34;
+}
+.closed.incorrect .icon-incorrect, .closed.correct-with-effort .icon-correct-with-effort, .closed.correct .icon-correct {
+    display: flex;
+    font-size: 23px;
+}
+.closed.incorrect .icon-correct-with-effort, .closed.incorrect .icon-correct, .closed.incorrect .icon-play,
+.closed.correct-with-effort .icon-incorrect, .closed.correct-with-effort .icon-correct, .closed.correct-with-effort .icon-play, 
+.closed.correct .icon-incorrect, .closed.correct .icon-correct-with-effort, .closed.correct .icon-play {
     display: none;
 }
