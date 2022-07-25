@@ -6,6 +6,7 @@
     border: 1px solid #D70900;
     box-shadow: 0px 4px 4px #D75C5C;
     font-family: 'Recursive', sans-serif;
+    cursor: pointer;
 }
 
 
@@ -38,6 +39,7 @@
 .open-question {
     background-color: #FFFFD4;
     position: relative;
+    z-index: 1;
 }
 .open-question .question {
     width: 268px;
@@ -85,7 +87,7 @@
     justify-content: space-between;
 }
 .open-answer .buttons div {
-    width: 85.17px;
+    width: 31%;
     height: 37.17px;
     border-radius: 5px;
 

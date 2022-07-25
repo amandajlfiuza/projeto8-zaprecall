@@ -28,22 +28,28 @@ export default function Flashcard({
             <div class='answer'>{answer}</div>
             <div class='buttons'>
                 <div class='incorrect' onClick={() => {
-                    setCardClass('closed incorrect flashcard');
-                    setAnswersCounter(answersCounter + 1);
-                    setIconsResult([...iconsResult, <ion-icon class='icon-incorrect' name="close-circle"></ion-icon>]);
-                    setIncorrectsCounter(incorrectsCounter + 1);
+                    if(cardClass === 'open-answer flashcard') {
+                        setCardClass('closed incorrect flashcard');
+                        setAnswersCounter(answersCounter + 1);
+                        setIconsResult([...iconsResult, <ion-icon class='icon-incorrect' name="close-circle"></ion-icon>]);
+                        setIncorrectsCounter(incorrectsCounter + 1);
+                    }
                     }}
                     >Não lembrei</div>
                 <div class='correct-with-effort' onClick={() => {
-                    setCardClass('closed correct-with-effort flashcard')
-                    setAnswersCounter(answersCounter + 1);
-                    setIconsResult([...iconsResult, <ion-icon class='icon-correct-with-effort' name="help-circle"></ion-icon>])
+                    if(cardClass === 'open-answer flashcard') {
+                        setCardClass('closed correct-with-effort flashcard')
+                        setAnswersCounter(answersCounter + 1);
+                        setIconsResult([...iconsResult, <ion-icon class='icon-correct-with-effort' name="help-circle"></ion-icon>])
+                    }
                     }}
                     >Quase não lembrei</div>
                 <div class='correct' onClick={() => {
-                    setCardClass('closed correct flashcard')
-                    setAnswersCounter(answersCounter + 1);
-                    setIconsResult([...iconsResult, <ion-icon class='icon-correct' name="checkmark-circle"></ion-icon>])
+                    if(cardClass === 'open-answer flashcard') {
+                        setCardClass('closed correct flashcard')
+                        setAnswersCounter(answersCounter + 1);
+                        setIconsResult([...iconsResult, <ion-icon class='icon-correct' name="checkmark-circle"></ion-icon>])
+                    }
                     }}
                     >Zap!</div>
             </div>
